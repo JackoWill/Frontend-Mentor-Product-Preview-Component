@@ -1,11 +1,3 @@
-/* .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-} */
-
 /* FONT FAMILY */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
 
@@ -28,39 +20,52 @@ Neutral:
 
 body {
   background-color: hsl(30, 38%, 92%);
+  color: #6c7289;
+  font-family: "Montserrat", sans-serf;
+  font-weight: 500;
   display: grid;
   place-content: center;
-  padding: 2.8rem 1.6rem;
+  margin: 1.5rem;
 }
 
-.product_img {
-  width: 100%;
-  margin-bottom: 2.4rem;
+@media (min-width: 600px) {
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product .product__content {
+    padding: 3rem;
+  }
+
+  .product .btn {
+    padding: 1rem;
+  }
 }
+
+/* PRODUCT */
 
 .product {
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
+  max-width: 600px;
 }
 
-.product_content {
+.product__content {
   display: grid;
-  gap: 1.6rem;
-  padding: 0 2.4rem;
+  gap: 1.7rem;
+  padding: 2.5rem;
 }
 
-.product_category {
-  font-family: "Montserrat", sans-serf;
-  color: #6c7289;
-  font-weight: 500;
+.product__category {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   line-height: 1.5rem;
   font-size: 1.2rem;
 }
 
-.product_title {
+.product__title {
   color: #1c232b;
   font-family: "Fraunces", serif;
   font-weight: 700;
@@ -68,22 +73,18 @@ body {
   line-height: 3.2rem;
 }
 
-.product_text {
-  font-family: "Montserrat", sans-serf;
-  font-weight: 500;
+.product__text {
   font-size: 1.4rem;
   line-height: 2.3rem;
-  color: #6c7289;
 }
 
-.flex_container {
+.flex__container {
   display: flex;
   gap: 1.9rem;
-
   align-items: center;
 }
 
-.product_price {
+.product__price {
   font-family: "Fraunces", serif;
   font-weight: 700;
   font-size: 3.2rem;
@@ -91,27 +92,43 @@ body {
   color: #3d8168;
 }
 
-.product_discount {
-  font-family: "Montserrat", sans-serf;
-  font-weight: 500;
+.product__original-price {
+  text-decoration: line-through;
   font-size: 1.3rem;
   line-height: 2.3rem;
-  color: #6c7289;
 }
 
+/* BUTTON */
+
 .btn {
+  cursor: pointer;
   background-color: #3d8168;
   border-radius: 0.8rem;
   border: none;
   color: #fff;
-  font-family: "Montserrat", sans-serf;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 1.7rem;
-  padding: 1.5rem 9.2rem;
-  margin-bottom: 2.4rem;
+  padding: 1.5rem;
 
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.1rem;
+}
+
+.btn:hover {
+  background-color: #1a4032;
+}
+
+footer {
+  padding-top: 1rem;
+}
+
+.attribution {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
