@@ -123,12 +123,14 @@ body {
   background-color: #1a4032;
 }
 
+/* FOOTER */
+
 footer {
   padding-top: 1rem;
 }
 
 .attribution {
-  font-size: 1.4rem;
+  font-size: 1rem;
   text-align: center;
 }
 .attribution a {
